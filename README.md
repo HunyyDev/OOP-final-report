@@ -1,5 +1,5 @@
 # OOP-final-report
-OOP final report of group 15 - Chiness chess simulator
+OOP final report of group 15 - Chinese chess simulator
 
 Members:
 Nguyễn Phước Hưng
