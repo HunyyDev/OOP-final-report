@@ -23,6 +23,14 @@ Cannons::Cannons(int a, int b)
 	}
 }
 
+void Cannons::output() 
+{
+	if (Col() == 0)
+		cout << "Ca0";
+	else
+		cout << "Ca1";
+}
+
 bool Cannons::check(int xx, int yy, Board b)
 {
 	{

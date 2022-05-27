@@ -63,5 +63,28 @@ Board::Board()
 
 void Board::Display()
 {
-}
+	system("cls");
+	cout << "\n\n\n";
+	cout << "---------------------------------------------" << endl;
+	cout << "   x   0   1   2   3   4   5   6   7   8\n";
+	cout << "y\n\n";
+	for (int i = 0; i < 10; i++) {
+		cout << i << "     ";
+		for (int j = 0; j < 9; j++) {
+			if (a[i][j] == NULL) {
+				if (i == 4 || i == 5)
+					cout << "~~~";
+				else cout << "   ";
+			}
+			else
+				a[i][j]->output();
+			if (i == 4 || i == 5)
+				cout << "~";
+			else
+				cout << " ";
 
+		}
+		cout << endl;
+	}
+	cout << "---------------------------------------------" << endl;
+}

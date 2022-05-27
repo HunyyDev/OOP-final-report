@@ -13,6 +13,7 @@ int main()
 	int turn = 0;
 	while (A.KingIsDead() == 0 && B.KingIsDead() == 0)
 	{
+		C.Display();
 		if (turn % 2 == 0)
 		{
 			cout << "Luot cua nguoi choi 1:\n";

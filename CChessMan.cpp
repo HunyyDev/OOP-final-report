@@ -49,6 +49,11 @@ bool ChessMan::check(int xx, int yy, Board b)
 	return false;
 }
 
+void ChessMan::output()
+{
+	return;
+}
+
 string ChessMan::getViTri()
 {
 	return '(' + to_string(x) +","+ to_string(y) + ')';

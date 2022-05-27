@@ -23,6 +23,14 @@ Soldiers::Soldiers(int a, int b)
 	}
 }
 
+void Soldiers::output()
+{
+	if (Col() == 0)
+		cout << "So0";
+	else
+		cout << "So1";
+}
+
 bool Soldiers::check(int xx, int yy, Board b)
 {
 	if (xx < 0 || xx> 8 || yy < 0 || yy > 9)

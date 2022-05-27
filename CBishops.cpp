@@ -53,3 +53,9 @@ void Bishops::move(Board& b)
 	cout << "Enter destination (Bishop):";
 	ChessMan::move(b);
 }
+void Bishops::output() {
+	if (Col() == 0)
+		cout << "Bi0";
+	else
+		cout << "Bi1";
+}

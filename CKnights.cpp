@@ -23,6 +23,14 @@ Knights::Knights(int a, int b)
 	}
 }
 
+void Knights::output() 
+{
+	if (Col() == 0)
+		cout << "Kn0";
+	else
+		cout << "Kn1";
+}
+
 bool Knights::check(int xx, int yy, Board b)
 {
 	if (xx < 0 || xx> 8 || yy < 0 || yy > 9)

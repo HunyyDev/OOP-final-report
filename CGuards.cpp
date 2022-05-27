@@ -23,6 +23,13 @@ Guards::Guards(int a, int b)
 	}
 }
 
+void Guards::output() {
+	if (Col() == 0)
+		cout << "Gu0";
+	else
+		cout << "Gu1";
+}
+
 bool Guards::check(int xx, int yy, Board b)
 {
 	if (!(abs(xx - x) == 1 && abs(yy - y) == 1))

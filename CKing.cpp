@@ -23,6 +23,13 @@ King::King(int a, int b)
 	}
 }
 
+void King::output(){
+	if (Col() == 0)
+		cout << "Ki0";
+	else
+		cout << "Ki1";
+}
+
 bool King::check(int xx, int yy, Board b)
 {
 	if (!((abs(xx - x) == 1 && yy == y) || (abs(yy - y) == 1 && xx == x)))

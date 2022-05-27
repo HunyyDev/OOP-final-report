@@ -23,6 +23,14 @@ Rooks::Rooks(int a, int b)
 	}
 }
 
+void Rooks::output() 
+{
+	if (Col() == 0)
+		cout << "Ro0";
+	else 
+		cout << "Ro1";
+}
+
 bool Rooks::check(int xx, int yy, Board b)
 {
 	if (xx < 0 || xx> 8 || yy < 0 || yy > 9)
