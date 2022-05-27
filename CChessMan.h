@@ -17,7 +17,7 @@ public:
 
 	virtual void move(Board& b);
 	virtual bool check(Board b);
-	bool check(int xx, int yy, Board b);
+	virtual bool check(int xx, int yy, Board b);
 
 	string getViTri();
 };

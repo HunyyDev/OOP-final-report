@@ -1,0 +1,12 @@
+﻿  CBishops.cpp
+  CBoard.cpp
+  CCannons.cpp
+  CChessMan.cpp
+  CGuards.cpp
+  CKing.cpp
+  CKnights.cpp
+  CPlayer.cpp
+  CRooks.cpp
+  CSoldiers.cpp
+  Generating Code...
+  CoTuong_final.vcxproj -> D:\OOP-final-report\x64\Debug\CoTuong_final.exe
