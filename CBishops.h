@@ -8,6 +8,6 @@ public:
 	Bishops(int a, int b);
 
 	bool check(int xx, int yy, Board b);
-	void move(Board& b);
+	int move(Board& b);
 	void output();
 };

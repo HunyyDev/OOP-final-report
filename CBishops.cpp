@@ -28,11 +28,11 @@ bool Bishops::check(int xx, int yy, Board b)
 	if (xx < 0 || xx>8)
 		return false;
 	if (Color == 0) {
-		if (yy < 0 || yy>4)
+		if (yy < 0 || yy > 4)
 			return false;
 	}
 	else if (Color == 1) {
-		if (yy < 5 || yy>9)
+		if (yy < 5 || yy > 9)
 			return false;
 	}
 	if (!(abs(xx - x) == 2 && abs(yy - y) == 2))
@@ -40,18 +40,18 @@ bool Bishops::check(int xx, int yy, Board b)
 
 	int xgiua = (x + xx) / 2;
 	int ygiua = (y + yy) / 2;
-	if (b.a[xgiua][ygiua] != NULL)
+	if (b.a[ygiua][xgiua] != NULL)
 		return false;
 
-	if (b.a[xx][yy] != NULL && b.a[xx][yy]->Col() == Color)
+	if (b.a[yy][xx] != NULL && b.a[yy][xx]->Col() == Color)
 		return false;
 	return true;
 }
 
-void Bishops::move(Board& b)
+int Bishops::move(Board& b)
 {
 	cout << "Enter destination (Bishop):";
-	ChessMan::move(b);
+	return ChessMan::move(b);
 }
 void Bishops::output() {
 	if (Col() == 0)

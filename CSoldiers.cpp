@@ -37,28 +37,28 @@ bool Soldiers::check(int xx, int yy, Board b)
 		return false;
 	if (Col() == 0) {
 		if (x < 5)
-			if (!(xx == (x + 1) && yy == y))
+			if (!(yy == (y + 1) && xx == x))
 				return false;
 		if (x >= 5)
-			if (!((xx == (x + 1) && yy == y) || (yy == y && abs(xx - x) == 1)))
+			if (!((yy == (y + 1) && xx == x) || (yy == y && abs(xx - x) == 1)))
 				return false;
 	}
 	else
 	{
 		if (x >= 5)
-			if (!(xx == (x + 1) && yy == y))
+			if (!(yy == (y - 1) && xx == x))
 				return false;
 		if (x < 5)
-			if (!((xx == (x + 1) && yy == y) || (yy == y && abs(xx - x) == 1)))
+			if (!((yy == (y + 1) && xx == x) || (yy == y && abs(xx - x) == 1)))
 				return false;
 	}
-	if (b.a[xx][yy] != NULL && b.a[xx][yy]->Col() == Color)
+	if (b.a[yy][xx] != NULL && b.a[yy][xx]->Col() == Color)
 		return false;
 	return true;
 }
 
-void Soldiers::move(Board& b)
+int Soldiers::move(Board& b)
 {
 	cout << "Enter destination (Soldiers):";
-	ChessMan::move(b);
+	return ChessMan::move(b);
 }

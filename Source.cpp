@@ -16,16 +16,24 @@ int main()
 		C.Display();
 		if (turn % 2 == 0)
 		{
-			cout << "Luot cua nguoi choi 1:\n";
+			cout << "Luot cua nguoi choi 0:\n";
 			A.TakeTurn(C);
 		}
 		else
 		{
-			cout << "Luot cua nguoi choi 2:\n";
+			cout << "Luot cua nguoi choi 1:\n";
 			B.TakeTurn(C);
 		}
 		turn++;
 	}
-
+	C.Display();
+	if (A.KingIsDead() == 1)
+	{
+		cout << "Nguoi choi 1 chien thang";
+	}
+	else
+	{
+		cout << "Nguoi choi 0 chien thang";
+	}
 	return 0;
 }

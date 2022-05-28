@@ -42,7 +42,7 @@ void KhoiTao(Player& A, Player& B, Board C)
 	B.list[15] = C.a[6][8];
 }
 
-void Player::TakeTurn(Board B)
+void Player::TakeTurn(Board& B)
 {
 	cout << "Chon quan co muon di chuyen:\n";
 	int LuaChon;
@@ -53,47 +53,49 @@ void Player::TakeTurn(Board B)
 			switch (i)
 			{
 			case 0:
-				cout << i << ".  Quan Tuong(Soai) " << list[i]->getViTri() << "\n";
+				cout << i << ".  Quan Tuong(Soai) (Ki)" << list[i]->getViTri() << "\n";
 				break;
 			case 1:
-				cout << i << ".  Quan Si " << list[i]->getViTri() << "\n";
+				cout << i << ".  Quan Si (Gu)" << list[i]->getViTri() << "\n";
 				break;
 			case 2:
-				cout << i << ".  Quan Si " << list[i]->getViTri() << "\n";
+				cout << i << ".  Quan Si (Gu)" << list[i]->getViTri() << "\n";
 				break;
 			case 3:
-				cout << i << ".  Quan Tuong " << list[i]->getViTri() << "\n";
+				cout << i << ".  Quan Tuong (Bi)" << list[i]->getViTri() << "\n";
 				break;
 			case 4:
-				cout << i << ".  Quan Tuong " << list[i]->getViTri() << "\n";
+				cout << i << ".  Quan Tuong (Bi)" << list[i]->getViTri() << "\n";
 				break;
 			case 5:
-				cout << i << ".  Quan Ma " << list[i]->getViTri() << "\n";
+				cout << i << ".  Quan Ma (Kn)" << list[i]->getViTri() << "\n";
 				break;
 			case 6:
-				cout << i << ".  Quan Ma " << list[i]->getViTri() << "\n";
+				cout << i << ".  Quan Ma (Kn)" << list[i]->getViTri() << "\n";
 				break;
 			case 7:
-				cout << i << ".  Quan Xe " << list[i]->getViTri() << "\n";
+				cout << i << ".  Quan Xe (Ro)" << list[i]->getViTri() << "\n";
 				break;
 			case 8:
-				cout << i << ".  Quan Xe " << list[i]->getViTri() << "\n";
+				cout << i << ".  Quan Xe (Ro)" << list[i]->getViTri() << "\n";
 				break;
 			case 9:
-				cout << i << ".  Quan Phao " << list[i]->getViTri() << "\n";
+				cout << i << ".  Quan Phao (Ca)" << list[i]->getViTri() << "\n";
 				break;
 			case 10:
-				cout << i << ".  Quan Phao " << list[i]->getViTri() << "\n";
+				cout << i << ".  Quan Phao (Ca)" << list[i]->getViTri() << "\n";
 				break;
 			default:
-				cout << i << ".  Quan Tot " << list[i]->getViTri() << "\n";
+				cout << i << ".  Quan Tot (So)" << list[i]->getViTri() << "\n";
 				break;
 			}
 		}
 	}
+	TryAgain:
 	cout << "\nNhap lua chon: ";
 	cin >> LuaChon;
-	list[LuaChon]->move(B);
+	if (list[LuaChon]->move(B) == 1)
+		goto TryAgain;
 }
 
 bool Player::KingIsDead()

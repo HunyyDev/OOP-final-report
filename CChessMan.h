@@ -15,7 +15,7 @@ public:
 	void die();
 	int Col();
 
-	void move(Board& b);
+	virtual int move(Board& b);
 	virtual bool check(Board b);
 	virtual void output();
 	virtual bool check(int xx, int yy, Board b);

@@ -44,13 +44,13 @@ bool King::check(int xx, int yy, Board b)
 		if (yy > 9 || yy < 7)
 			return false;
 	}
-	if (b.a[xx][yy] != NULL && b.a[xx][yy]->Col() == Color)
+	if (b.a[yy][xx] != NULL && b.a[yy][xx]->Col() == Color)
 		return false;
 	return true;
 }
 
-void King::move(Board& b)
+int King::move(Board& b)
 {
-	cout << "Enter destination (General):";
-	ChessMan::move(b);
+	cout << "Enter destination (King):";
+	return ChessMan::move(b);
 }

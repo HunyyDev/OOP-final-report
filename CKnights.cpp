@@ -48,16 +48,16 @@ bool Knights::check(int xx, int yy, Board b)
 		ygiua = y + 1;
 	if (y - yy == 2)
 		ygiua = y - 1;
-	if (b.a[xgiua][ygiua] != NULL)
+	if (b.a[ygiua][xgiua] != NULL)
 		return false;
 
-	if (b.a[xx][yy] != NULL && b.a[xx][yy]->Col() == Color)
+	if (b.a[yy][xx] != NULL && b.a[yy][xx]->Col() == Color)
 		return false;
 	return true;
 }
 
-void Knights::move(Board& b)
+int Knights::move(Board& b)
 {
 	cout << "Enter destination (Knights):";
-	ChessMan::move(b);
+	return ChessMan::move(b);
 }

@@ -19,23 +19,35 @@ int ChessMan::Col()
 	return Color;
 }
 
-void ChessMan::move(Board& b)
+int ChessMan::move(Board& b)
 {
 	int xx, yy;
-	cin >> xx >> yy;
+	cout << "\nNhap x = -1 de chon lai con co: ";
+	cout << "\nNhap x: ";
+	cin >> xx;
+	if (xx == -1)
+		return 1;
+	cout << "Nhap y: ";
+	cin >> yy;
 	while (check(xx, yy, b) == false) {
-		cout << "Invalid! Again:";
-		cin >> xx >> yy;
+		cout << "Khong hop le, nhap lai\n";
+		cout << "Nhap x: ";
+		cin >> xx;
+		if (xx == -1)
+			return 1;
+		cout << "Nhap y: ";
+		cin >> yy;
 	}
 
-	if (b.a[xx][yy] != NULL)
-		b.a[xx][yy]->die();
+	if (b.a[yy][xx] != NULL)
+		b.a[yy][xx]->die();
 
-	b.a[xx][yy] = b.a[x][y];
-	b.a[x][y] = NULL;
-
+	b.a[yy][xx] = b.a[y][x];
+	b.a[y][x] = NULL;
 	x = xx;
 	y = yy;
+
+	return 0;
 }
 
 

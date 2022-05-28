@@ -31,7 +31,7 @@ Board::Board()
 	a[9][7] = new Knights(7, 9);
 
 	a[0][2] = new Bishops(2, 0);
-	a[0][6] = new Bishops(6, 2);
+	a[0][6] = new Bishops(6, 0);
 	a[9][2] = new Bishops(2, 9);
 	a[9][6] = new Bishops(6, 9);
 
@@ -64,6 +64,8 @@ Board::Board()
 void Board::Display()
 {
 	system("cls");
+	cout << "Studio: 6days_Before_Deadline han hanh gioi thieu\n";
+
 	cout << "\n\n\n";
 	cout << "---------------------------------------------" << endl;
 	cout << "   x   0   1   2   3   4   5   6   7   8\n";

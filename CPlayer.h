@@ -14,7 +14,7 @@ private:
 	// [9] = [10] = Cannons
 	// the rest is Soldiers 
 public:
-	void TakeTurn(Board);
+	void TakeTurn(Board&);
 	bool KingIsDead();
 
 	friend void KhoiTao(Player&, Player&, Board);
